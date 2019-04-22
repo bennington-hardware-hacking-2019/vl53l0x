@@ -15,7 +15,7 @@ if __name__== "__main__":
     tof.setup()
     led.setup()
 
-    rest = 0.001
+    rest = 0.1
     while True:
         distance = tof.measure()
         led.display(distance)
