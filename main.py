@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #
 # main.py shows vl53l0x tof reading on ht16k33 7-segment display
 #
