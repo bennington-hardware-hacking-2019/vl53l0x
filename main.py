@@ -1,5 +1,5 @@
 #
-# reading.py shows vl53l0x tof reading on ht16k33 7-segment display
+# main.py shows vl53l0x tof reading on ht16k33 7-segment display
 #
 
 import time
