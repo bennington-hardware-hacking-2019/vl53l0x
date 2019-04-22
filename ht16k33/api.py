@@ -2,9 +2,10 @@
 # api.py contains a set of core functions
 #
 
-import bus
+import smbus
 
 from .map import *
+from .register import *
 
 class HT16K33(object):
     def __init__(self):
@@ -33,9 +34,9 @@ class HT16K33(object):
             self.write_led(num_map['0'], num_map[str_num[0]], num_map[str_num[1]], num_map[str_num[2]])
         else:
             str_num = str(num)[:4]
-            write_led(num_map[str_num[0]], num_map[str_num[1]], num_map[str_num[2]], num_map[str_num[3]])
+            self.write_led(num_map[str_num[0]], num_map[str_num[1]], num_map[str_num[2]], num_map[str_num[3]])
 
-    def write_led(d0, d1, d2, d3):
+    def write_led(self, d0, d1, d2, d3):
         """write the 4 digit value to the device"""
         data = [d0, 0x00, d1, 0x00, 0x00, 0x00, d2, 0x00, d3, 0x00]
         self.write_block(0x00, data)
