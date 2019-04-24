@@ -4,8 +4,8 @@
 
 import smbus
 
-from .map import *
-from .register import *
+from ht16k33.map import *
+from ht16k33.register import *
 
 class HT16K33(object):
     def __init__(self):
